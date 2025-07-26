@@ -1,73 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=MonteCarlo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap y estilos -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+
     <title>Entre Formas y Puntadas</title>
-</head>
+  </head>
+  <body class="body-index">
+    <!-- HEADER -->
+    <header class="shadow-sm sticky-top">
+      <nav class="navbar navbar-expand-lg container-fluid">
+        <div
+          class="d-flex align-items-center w-100 px-3 justify-content-between"
+        >
+          <!-- Logo -->
+          <div class="logo-container">
+            <img src="./img/logotipo1.png" alt="Logo" class="img-logo" />
+          </div>
 
-<body class="body-index">
-    <header class="header-index">  
+          <!-- Título -->
+          <h1 class="site-title m-0 flex-grow-1 text-center">
+            Entre formas y puntadas
+          </h1>
 
-            <div class="contenedor-logo">
-                <img src="./img/logotipo1.png" alt="logotipo1" class="imglogo">
-                <br>
-            </div>
-            <h1>Entre Formas y Puntadas </h1>
-            <nav class="nav-index">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="./pedidos exclusivos.html">Pedidos</a></li>
-                    <li><a href="./tienda.html">Tienda</a></li>
-                </ul>
-            </nav>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Menú navegación -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tienda.html">Tienda</a>
+            </li>
+
+            <!-- Ícono de carrito -->
+            <li class="nav-item">
+              <a
+                class="nav-link position-relative"
+                href="#"
+                onclick="toggleCart()"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cart-count"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- CARRITO DESPLEGABLE -->
+      <div id="cart-container" class="cart-container d-none">
+        <h4>Carrito de compras</h4>
+        <ul id="cart-items" class="list-group mb-2"></ul>
+        <p>Total: $<span id="cart-total">0</span></p>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-danger btn-sm" onclick="emptyCart()">
+            Vaciar carrito
+          </button>
+          <button class="btn btn-success btn-sm" onclick="finalizePurchase()">
+            Finalizar compra
+          </button>
+        </div>
+      </div>
     </header>
 
-    <main class="main-index">
-  <section class="section-index">
-        <p>
-            Hola soy sabri, artista visual desde los 12 años.Empece pintando sobre tela con un enfoque realista, y con el tiempo
-            fui explorando el arte abstracto, aprendiendo con distintos profesores a soltar estructuras y conectar con nuevas
-            formas de expresion. Pinto inspirada por la vegetacion y los edificios: me atraen ese contraste entre lo natural y
-            lo urbano, lo libre y lo estructurado.
-            Trabajo en mi casa, donde tengo un atelier que me permite crear en calma y en conexion conmigo misma.
-            El bordado llego despues y se volvio una pasion. Exploro distintas tecnicas-estilo japones,
-            mexicano,peruano,cruz,pincel- pero lo que mas disfruto es el bordado con cintas, espcialmente cuando bordo flores: ahi
-            los colores y volumenes cobran vida de una forma unica.
-            Desde hace mas de un año tambien hago ceramica. me gusta trabajar con la arcilla, probar nuevas tecnicas y crear objetos
-            que acompañen momentos cotidianos con belleza y calidez.
-            Creo profundamente que todo lo hecho a mano transmite una energia especial.Cada pieza que creo lleva mi amor, cuidado y
-            concentraccion.
-            Lo que busco es que quienes se encuentren con mis obras puedan sentir todo lo que se puede decir a traves de las manos.
-            
-            Gracias por estar aca!</p>
-      
-            <aside class="videotaza"><video controls autoplay loop poster="./videos/Taza-filtro.mp4" height="450px">
-                <source src="/videos/Taza-filtro.mp4" type="video/mp4">
-                <track src="./videos/subtitulo.vtt" kind="subtitles" srclang="es" label="español" default>
-                </track>
-            </video>
-            <audio class="audio1" controls autoplay>
-                <source src="./audio/Bossa Nova by Acoustic Guitar.mp3" type="audio/mpeg">
-            </audio></aside>
+    <!-- MAIN -->
+    <main class="container my-4">
+      <div class="div-main">
+        <section class="rigth-sec">
+          <h2 class="section-title">Entre formas y puntadas</h2>
+          <p class="text-content">
+            Hola soy Sabri, artista visual desde los 12 años. Empecé pintando
+            sobre tela con un enfoque realista, y con el tiempo fui explorando
+            el arte abstracto, aprendiendo con distintos profesores a soltar
+            estructuras y conectar con nuevas formas de expresión. Pinto
+            inspirado por la vegetación y los edificios: me atraen ese contraste
+            entre lo natural y lo urbano, lo libre y lo estructurado. Trabajo en
+            mi casa, donde tengo un atelier que me permite crear en calma y en
+            conexión conmigo misma. El bordado llegó después y se volvió una
+            pasión. Explora distintas técnicas -estilo japonés, mexicano,
+            peruano, cruz, pincel- pero lo que más disfruto es el bordado con
+            cintas, especialmente cuando bordo flores: ahí los colores y
+            volúmenes cobran vida de una forma única. Desde hace más de un año
+            también hago cerámica: me gusta trabajar con la arcilla, probar
+            nuevas técnicas y crear objetos que acompañen momentos cotidianos
+            con belleza y calidez. Creo profundamente que todo lo hecho a mano
+            transmite una energía especial. Cada pieza que creo lleva mi amor,
+            cuidado y concentración. Lo que busco es que quienes se encuentren
+            con mis obras puedan sentir todo lo que se puede decir a través de
+            las manos. ¡Gracias por estar aquí!
+          </p>
         </section>
-        <hr>
-    </main>
-    <footer class="footer-index">
-        <div class="icon-footer"><i class="fa-brands fa-instagram"></i>
-        <i class="fa-solid fa-envelope"></i>
-        <i class="fa-brands fa-facebook"></i></div>
-        <p>Desarrolladora: Clausi Sabrina-2025 |<a href="mailto: sabrinaclausi@gmail.com"> sabrinaclausi@gmail.com</a>
+
+        <section class="my-5 left-sec">
+          <h3 class="text-subtitle">Mi proceso creativo en cerámica</h3>
+          <div class="video-audio-container">
+            <video controls autoplay loop poster="./videos/Taza-filtro.mp4">
+              <source src="./videos/Taza-filtro.mp4" type="video/mp4" />
+              <track
+                src="./videos/subtitulo.vtt"
+                kind="subtitles"
+                srclang="es"
+                label="Español"
+                default
+              />
+            </video>
+            <audio controls autoplay>
+              <source
+                src="./audio/Bossa Nova by Acoustic Guitar.mp3"
+                type="audio/mpeg"
+              />
+            </audio>
+          </div>
+          <p class="text-content">
+            "Cada pieza de cerámica nace de la conexión entre mis manos y la
+            arcilla"
+          </p>
+        </section>
+      </div>
+
+      <section class="text-center my-5">
+        <h3 class="section-title">Descubre mi Arte</h3>
+        <p class="text-content">
+          Explora mis creaciones únicas en bordado, cerámica y pintura...
         </p>
+        <a href="ceramica.html" class="btn boton-verde">Ver cerámica</a>
+        <a href="bordado.html" class="btn boton-verde">Ver bordado</a>
+        <a href="pintura.html" class="btn boton-verde">Ver pintura</a>
+      </section>
+    </main>
 
+    <!-- FOOTER -->
+    <footer class="footer-index">
+      <h3 class="text-subtitle">Entre formas y puntadas</h3>
+      <p class="text-content">
+        Creamos arte único a mano con técnicas tradicionales y mucho amor.
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fas fa-envelope"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <p class="text-content">
+        Desarrolladora: Clausi Sabrina - 2025 |
+        <a href="mailto:sabrinaclausi@gmail.com">sabrinaclausi@gmail.com</a>
+      </p>
     </footer>
-</body>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+
+    <script>
+      let cart = [];
+
+      function toggleCart() {
+        const cartContainer = document.getElementById("cart");
+        cartContainer.classList.toggle("d-none");
+      }
+
+      function updateCartUI() {
+        const cartItemsContainer = document.getElementById("cart-items");
+        const cartCount = document.getElementById("cart-count");
+        const cartTotal = document.getElementById("cart-total");
+
+        cartItemsContainer.innerHTML = "";
+        let total = 0;
+
+        cart.forEach((item, index) => {
+          total += item.price * item.quantity;
+
+          cartItemsContainer.innerHTML += `
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>${item.name}</span>
+              <input type="number" class="form-control form-control-sm w-25 mx-2 cart-item-qty" value="${
+                item.quantity
+              }" min="1" data-index="${index}">
+              <span>$${(item.price * item.quantity).toFixed(2)}</span>
+              <button class="btn btn-sm btn-outline-danger cart-item-remove" data-index="${index}">&times;</button>
+            </li>
+          `;
+        });
+
+        cartCount.textContent = cart.reduce(
+          (acc, item) => acc + item.quantity,
+          0
+        );
+        cartTotal.textContent = total.toFixed(2);
+      }
+
+      document.addEventListener("click", function (e) {
+        if (e.target.classList.contains("cart-item-remove")) {
+          const index = e.target.dataset.index;
+          cart.splice(index, 1);
+          updateCartUI();
+        }
+      });
+
+      document.addEventListener("input", function (e) {
+        if (e.target.classList.contains("cart-item-qty")) {
+          const index = e.target.dataset.index;
+          cart[index].quantity = parseInt(e.target.value);
+          updateCartUI();
+        }
+      });
+
+      function agregarAlCarrito(nombre, precio) {
+        const existente = cart.find((item) => item.name === nombre);
+        if (existente) {
+          existente.quantity += 1;
+        } else {
+          cart.push({ name: nombre, price: precio, quantity: 1 });
+        }
+        updateCartUI();
+      }
+    </script>
+  </body>
 </html>
