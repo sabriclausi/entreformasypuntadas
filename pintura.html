@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entre Formas y Puntadas</title>
+
+    <!-- Fuentes y Bootstrap -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="./css/style.css" />
+     <link rel="stylesheet" href="./css/style-pintura.css" />
+  </head>
+
+  <body class="body-index">
+    <!-- HEADER -->
+    <header class="shadow-sm sticky-top">
+      <nav class="navbar navbar-expand-lg container-fluid">
+        <div
+          class="d-flex align-items-center w-100 px-3 justify-content-between"
+        >
+          <!-- Logo -->
+          <div class="logo-container">
+            <img src="./img/logotipo1.png" alt="Logo" class="img-logo" />
+          </div>
+
+          <!-- Título -->
+          <h1 class="site-title m-0 flex-grow-1 text-center">
+            Entre formas y puntadas
+          </h1>
+
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <!-- Menú navegación -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link position-relative"
+                href="#"
+                onclick="toggleCart()"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cart-count"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+<main class="main-pintura">
+      <a href="./index.html" class="boton-back"
+        ><span><i class="fa-solid fa-arrow-left"></i></span>Volver al Inicio</a>
+<div class="title">
+        <h2 class="section-title">Pintura</h2>
+        <p class="texto">
+          Obras únicas donde cada pincelada expresa emociones y cuenta historias visuales</p>
+</main>
+
+<!-- Carrusel de Cards -->
+  <div class="container">
+    <div class="row justify-content-center gx-4">
+
+      <!-- CARD 1 -->
+      <div class="col-md-6 col-lg-5 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div id="carouselglobo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/globo1.jpg" class="d-block w-100" alt="globo1">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/globo2.jpg" class="d-block w-100" alt="globo2">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselvolaressoltar" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselvolaressoltar" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Volar es Soltar  </h5>
+            <p class="card-text">Una escena onírica donde un globo aerostático y un ave comparten el cielo al atardecer. Esta obra transmite la dualidad entre lo que flota y lo que vuela, lo que se eleva con ayuda y lo que lo hace por sí mismo. Técnica mixta y colores suaves que invitan a dejarse llevar</p>
+            <a href="carrito.html" class="btn btn-primary">🛒 Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="col-md-6 col-lg-5 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div id="carouselsanjuan" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/sanjuan1.jpg" class="d-block w-100" alt="san juan1">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/sanjuan2.jpg" class="d-block w-100" alt="san juan2">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/sanjuan3.jpg" class="d-block w-100" alt="san juan3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselvalledelaluna" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselvalledelaluna" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Valle de la Luna</h5>
+            <p class="card-text">Inspirada en el asombroso paisaje del Valle de la Luna, en San Juan, esta obra transmite la majestuosidad del desierto y sus formaciones rocosas únicas. La paleta cálida y las texturas intensas evocan la fuerza mineral del lugar, bajo un cielo profundo que invita al silencio y la contemplación. Una pintura que captura la magia de lo ancestral y lo eterno</p>
+            <a href="carrito.html" class="btn btn-primary">🛒 Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="col-md-6 col-lg-5 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div id="carouselexplosionvital" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/manchas1.jpg" class="d-block w-100" alt="manchas1">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/manchas2.jpg" class="d-block w-100" alt="manchas2">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/manchas3.jpg" class="d-block w-100" alt="manchas3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselBandeja" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselBandeja" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Explosion Vital</h5>
+            <p class="card-text">Abstracción pura que celebra el movimiento, la energía y la vida. Trazos espontáneos, colores vibrantes y contrastes intensos se encuentran en una danza visual donde cada espectador puede descubrir una forma diferente. Una obra llena de fuerza expresiva</p>
+            <a href="carrito.html" class="btn btn-primary">🛒 Comprar</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="col-md-6 col-lg-5 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div id="carouselTazaFiltro" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./img/mujer.jpg" class="d-block w-100" alt="guardianasdelbosque1">
+              </div>
+              <div class="carousel-item">
+                <img src="./img/mujer2.jpg" class="d-block w-100" alt="guardianasdelbosque2">
+              </div><div class="carousel-item">
+                <img src="./img/mujer3.jpg" class="d-block w-100" alt="guardianasdelbosque3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselguardianasdelbosque" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselguardianasdelbosque" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          <div class="card-body text-center">
+            <h5 class="card-title">Guardianas del Bosque</h5>
+            <p class="card-text">Entre texturas y colores terrosos, se insinúan figuras femeninas que emergen como parte del paisaje. Esta obra evoca la conexión ancestral con la naturaleza y el rol sagrado de lo femenino. Pintura cargada de simbolismo y mística</p>
+            <a href="carrito.html" class="btn btn-primary">🛒 Comprar</a>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+    <!-- FOOTER -->
+    <footer class="footer-index">
+      <h3 class="text-subtitle">Entre formas y puntadas</h3>
+      <p class="text-content">
+        Creamos arte único a mano con técnicas tradicionales y mucho amor.
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fas fa-envelope"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <p class="text-content">
+        Desarrolladora: Clausi Sabrina - 2025 |
+        <a href="mailto:sabrinaclausi@gmail.com">sabrinaclausi@gmail.com</a>
+      </p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
