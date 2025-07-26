@@ -1,83 +1,329 @@
 <!DOCTYPE html>
-<html lang="español">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=MonteCarlo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-pedidos.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Entre Formas y Puntadas</title>
-</head>
-
-<body class="body-index">
-    <header class="header-index">
- <div class="contenedor-logo">
-            <img src="./img/logotipo1.png" alt="logotipo1" class="imglogo">
-            <br>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Entre Formas y Puntadas - Pedidos Exclusivos</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-pedidos.css" />
+  </head>
+  <body class="body-index">
+    <!-- HEADER -->
+    <header class="shadow-sm sticky-top">
+      <nav class="navbar navbar-expand-lg container-fluid">
+        <div
+          class="d-flex align-items-center w-100 px-3 justify-content-between"
+        >
+          <div class="logo-container">
+            <img src="./img/logotipo1.png" alt="Logo" class="img-logo" />
+          </div>
+          <h1 class="site-title m-0 flex-grow-1 text-center">
+            Entre formas y puntadas
+          </h1>
+          <!-- Botón hamburguesa -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-        <h1>Entre Formas y Puntadas-Pedidos </h1>
-        <nav class="nav-index">
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="Productos.html">Productos</a></li>
-                <li><a href="./pedidos exclusivos.html">Pedidos</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-            </ul>
-        </nav>
+        <!-- Menú navegación -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link position-relative"
+                href="#"
+                onclick="toggleCart()"
+                ><i class="fas fa-shopping-cart"></i
+                ><span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cart-count"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- CARRITO DESPLEGABLE -->
+        <div id="cart-container" class="cart-container d-none">
+          <h4>Carrito de compras</h4>
+          <ul id="cart-items" class="list-group mb-2"></ul>
+          <p>Total: $<span id="cart-total">0</span></p>
+          <div class="d-flex justify-content-between">
+            <button class="btn btn-danger btn-sm" onclick="emptyCart()">
+              Vaciar carrito
+            </button>
+            <button class="btn btn-success btn-sm" onclick="finalizePurchase()">
+              Finalizar compra
+            </button>
+          </div>
+        </div>
+      </nav>
     </header>
-    <main class="main-pedidos">
-        <section class="section-pedidos">
-            <h1>Ceramica</h1>
-            <img src="./img/boul graciana.jpg">
-            <form action="https://formspree.io/f/mwpoalbd" method="post">
-                <input class="inp-pedidos" type="text" name="Nombre" id="nombre" placeholder="Ingrese su nombre">
-                <input class="inp-pedidos" type="email" name="Email" id="email" placeholder="Ingrese su email">
-                <textarea name="Consulta" rows="5" cols="30" placeholder="Escribir aqui su pedido exclusivo"
-                    id=""></textarea>
-                <input type="submit" name="Submit" id="submit" placeholder="Enviar">
-            </form>
-        </section>
 
-<section class="section-pedidos">
-             <h1>Bordado</h1>
-            <img src="./img/bolso blanco.jpg" >
-            <form action="https://formspree.io/f/mwpoalbd" method="post">
-                <input class="inp-pedidos" type="text" name="Nombre" id="nombre" placeholder="Ingrese su nombre">
-                <input class="inp-pedidos" type="email" name="Email" id="email" placeholder="Ingrese su email">
-                <textarea name="Consulta" rows="5" cols="30" placeholder="Escribir aqui su pedido exclusivo"
-                    id=""></textarea>
-                <input type="submit" name="Submit" id="submit" placeholder="Enviar">
-            </form>
-        </section>
+    <!-- MAIN -->
+    <main class="main-pedidos py-5" style="background-color: #f2e7d5">
+      <a href="./index.html" class="boton-back">
+        <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
+      </a>
+      <div class="container">
+        <h2
+          class="section-title text-center mb-4"
+          style="
+            font-family: 'MonteCarlo', cursive;
+            color: #235752;
+            font-size: 3rem;
+          "
+        >
+          Pedidos Exclusivos
+        </h2>
 
-<section class="section-pedidos">
-            <h1>Pintura</h1>
-            <img src="./img/sanjuan1.jpg">
-            <form action="https://formspree.io/f/mwpoalbd" method="post">
-                <input class="inp-pedidos" type="text" name="Nombre" id="nombre" placeholder="Ingrese su nombre">
-                <input class="inp-pedidos" type="email" name="Email" id="email" placeholder="Ingrese su email">
-                <textarea name="Consulta" rows="5" cols="30" placeholder="Escribir aqui su pedido exclusivo"
-                    id=""></textarea>
-                <input type="submit" name="Submit" id="submit" placeholder="Enviar">
-            </form>
-        </section>
-    </main>
-     <a href="./index.html">Volver</a>
-
-    <footer class="footer-index">
-        <div class="icon-footer"><i class="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-brands fa-facebook"></i>
-        </div>
-        <p>Desarrolladora: Clausi Sabrina-2025 |<a href="mailto: sabrinaclausi@gmail.com"> sabrinaclausi@gmail.com</a>
+        <p
+          class="texto text-center mb-5"
+          style="
+            font-family: 'Josefin Sans', sans-serif;
+            color: #235752;
+            font-size: 1.2rem;
+          "
+        >
+          ¿Querés un pedido personalizado? Completá el formulario del área que
+          te interese y nos contactaremos para hacerlo realidad.
         </p>
 
+        <div class="row g-5 justify-content-center">
+          <!-- Formulario Cerámica -->
+          <section class="col-md-6 col-lg-4">
+            <h3
+              class="section-title2 mb-3"
+              style="
+                font-family: 'MonteCarlo', cursive;
+                color: #235752;
+                font-size: 2.5rem;
+                text-align: center;
+              "
+            >
+              Cerámica
+            </h3>
+            <div class="imagen-t">
+              <img
+                src="./img/boul graciana.jpg"
+                alt="Cerámica"
+                class="img-fluid rounded mb-3"
+              />
+            </div>
+            <form
+              action="https://formspree.io/f/mwpoalbd"
+              method="post"
+              class="p-3 bg-light rounded shadow-sm"
+            >
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Nombre"
+                  placeholder="Ingrese su nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="Email"
+                  placeholder="Ingrese su email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="Consulta"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Escribir aquí su pedido exclusivo"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Enviar
+              </button>
+            </form>
+          </section>
+
+          <!-- Formulario Bordado -->
+          <section class="col-md-6 col-lg-4">
+            <h3
+              class="section-title2 mb-3"
+              style="
+                font-family: 'MonteCarlo', cursive;
+                color: #235752;
+                font-size: 2.5rem;
+                text-align: center;
+              "
+            >
+              Bordado
+            </h3>
+            <div class="imagen-t">
+              <img
+                src="./img/bolso blanco.jpg"
+                alt="Bordado"
+                class="img-fluid rounded mb-3"
+              />
+            </div>
+
+            <form
+              action="https://formspree.io/f/mwpoalbd"
+              method="post"
+              class="p-3 bg-light rounded shadow-sm"
+            >
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Nombre"
+                  placeholder="Ingrese su nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="Email"
+                  placeholder="Ingrese su email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="Consulta"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Escribir aquí su pedido exclusivo"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Enviar
+              </button>
+            </form>
+          </section>
+
+          <!-- Formulario Pintura -->
+          <section class="col-md-6 col-lg-4">
+            <h3
+              class="section-title2 mb-3"
+              style="
+                font-family: 'MonteCarlo', cursive;
+                color: #235752;
+                font-size: 2.5rem;
+                text-align: center;
+              "
+            >
+              Pintura
+            </h3>
+            <div class="imagen-t">
+              <img
+                src="./img/sanjuan1.jpg"
+                alt="Pintura"
+                class="img-fluid rounded mb-3"
+              />
+            </div>
+
+            <form
+              action="https://formspree.io/f/mwpoalbd"
+              method="post"
+              class="p-3 bg-light rounded shadow-sm"
+            >
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  name="Nombre"
+                  placeholder="Ingrese su nombre"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  name="Email"
+                  placeholder="Ingrese su email"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <textarea
+                  name="Consulta"
+                  class="form-control"
+                  rows="5"
+                  placeholder="Escribir aquí su pedido exclusivo"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">
+                Enviar
+              </button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="footer-index text-center py-4"
+      style="background-color: #f5daae; color: #235752"
+    >
+      <h3 style="font-family: 'MonteCarlo', cursive">
+        Entre formas y puntadas
+      </h3>
+      <p style="font-family: 'Josefin Sans', sans-serif">
+        Creamos arte único a mano con técnicas tradicionales y mucho amor.
+      </p>
+      <div class="social-icons mb-3 fs-4">
+        <i class="fab fa-instagram mx-2"></i>
+        <i class="fas fa-envelope mx-2"></i>
+        <i class="fab fa-facebook mx-2"></i>
+      </div>
+      <p style="font-family: 'Josefin Sans', sans-serif">
+        Desarrolladora: Clausi Sabrina - 2025 |
+        <a
+          href="mailto:sabrinaclausi@gmail.com"
+          class="text-decoration-none"
+          style="color: #235752"
+          >sabrinaclausi@gmail.com</a
+        >
+      </p>
     </footer>
 
-</body>
-
+    <!-- Scripts Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

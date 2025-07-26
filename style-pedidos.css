@@ -1,0 +1,79 @@
+/* Tipografías */
+.section-title2 {
+  font-family: "MonteCarlo", cursive;
+  color: #235752;
+  font-size: 2.5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+.texto {
+  font-family: "Josefin Sans", sans-serif;
+  color: #235752;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.boton-back {
+  appearance: none;
+  text-decoration: none;
+  color: #235752;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  width: 10rem;
+}
+.boton-back:hover {
+  background: #f5daae;
+  border-radius: 10px;
+}
+
+/* Formulario */
+form {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+form .form-control {
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #235752;
+  box-shadow: 0 0 5px #235752aa;
+}
+
+/* Botón enviar */
+form button.btn-primary {
+  background-color: #235752;
+  border-color: #235752;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form button.btn-primary:hover {
+  background-color: #1c4642;
+  border-color: #1c4642;
+}
+
+/* Imagenes en formularios */
+.imagen-t {
+  width: 100%;
+  max-width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.imagen-t img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
