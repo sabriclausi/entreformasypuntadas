@@ -1,56 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=MonteCarlo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style-tienda.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <title>Tienda</title>
-</head>
-<body class="body-index">
-    <header class="header-index">
- <div class="contenedor-logo">
-            <img src="./img/logotipo1.png" alt="logotipo1" class="imglogo">
-            <br>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Marck+Script&family=MonteCarlo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-productos.css" />
+   
+<title>Entre Formas y Puntadas</title>
+
+  </head>
+
+  <body class="body-index">
+    <!-- HEADER -->
+    <header class="shadow-sm sticky-top">
+      <nav class="navbar navbar-expand-lg container-fluid">
+        <div
+          class="d-flex align-items-center w-100 px-3 justify-content-between"
+        >
+          <!-- Logo -->
+          <div class="logo-container">
+            <img src="./img/logotipo1.png" alt="Logo" class="img-logo" />
+          </div>
+
+          <!-- Título -->
+          <h1 class="site-title m-0 flex-grow-1 text-center">
+            Entre formas y puntadas
+          </h1>
         </div>
-        <h1>Entre Formas y Puntadas-Productos </h1>
-        <nav class="nav-index">
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="Productos.html">Productos</a></li>
-                <li><a href="./pedidos exclusivos.html">Pedidos</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-            </ul>
-        </nav>
-    </header>       
-    <main>
-        <section>
-            <img src="./img/boul graciana.jpg" width="25%">
-
-            <img src="./img/boul flora.jpg" width="25%">
-            <section></section>
-
-            <img src="./img/remera1.jpg" width="25%">
-            
-            <img src="./img/almohadon.jpg" width="25%">
-
-        </section>
-        
-    </main>
-    <a href="./index.html">Volver</a>
-
-    <footer class="footer-index">
-        <div class="icon-footer"><i class="fa-brands fa-instagram"></i>
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-brands fa-facebook"></i>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-        <p>Desarrolladora: Clausi Sabrina-2025 |<a href="mailto: sabrinaclausi@gmail.com"> sabrinaclausi@gmail.com</a>
+        <!-- Menú navegación -->
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <ul class="navbar-nav ms-auto text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">Inicio</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href="./productos.html">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link position-relative"
+                href="#"
+                onclick="toggleCart()"
+              >
+                <i class="fas fa-shopping-cart"></i>
+                <span
+                  class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                  id="cart-count"
+                  >0</span
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+    <div id="cart-container" class="cart-container d-none">
+      <h4>Carrito de compras</h4>
+      <ul id="cart-items" class="list-group mb-2"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-danger btn-sm" onclick="emptyCart()">
+          Vaciar carrito
+        </button>
+        <button class="btn btn-success btn-sm" onclick="finalizePurchase()">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+     <main class="main-productos">
+      <a href="./index.html" class="boton-back"
+        ><span><i class="fa-solid fa-arrow-left"></i></span>Volver al Inicio</a>
+<div class="title">
+        <h2 class="section-title">Nuestros productos artesanales</h2>
+        <p class="texto">
+          Descubre la magia de cada técnica artesanal. Cada categoría representa años de dedicación y pasión por crear piezas únicas que tocan el alma.
         </p>
+      </div>
 
+<!-- Cards -->
+ <div class="cards-section">
+  <div class="card-group-productos">
+    <!-- Bordado -->
+    <div class="card card-producto">
+      <img src="./img/bolso blanco.jpg" class="card-img-top" alt="Producto de Bordado">
+      <div class="card-body">
+        <h5 class="card-title">Bordado</h5>
+        <p class="card-textos">Arte textil con cintas, hilos y creatividad.</p>
+        <a href="./bordado.html" class="btn btn-outline-secondary mt-2">Ver productos de Bordado</a>
+      </div>
+    </div>
+
+    <!-- Cerámica -->
+    <div class="card card-producto">
+      <img src="./img/boul flora.jpg" class="card-img-top" alt="Producto de Cerámica">
+      <div class="card-body">
+        <h5 class="card-title">Cerámica</h5>
+        <p class="card-text">Piezas utilitarias hechas a mano y con amor.</p>
+        <a href="./ceramica.html" class="btn btn-outline-secondary mt-2">Ver productos de Cerámica</a>
+      </div>
+    </div>
+
+    <!-- Pintura -->
+    <div class="card card-producto">
+      <img src="./img/globo1.jpg" class="card-img-top" alt="Producto de Pintura">
+      <div class="card-body">
+        <h5 class="card-title">Pintura</h5>
+        <p class="card-text">Desde lo realista a lo abstracto, cada obra tiene historia.</p>
+        <a href="./pintura.html" class="btn btn-outline-secondary mt-2">Ver productos de Pintura</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Carrusel -->
+ <div id="carouselExample" class="carousel slide mt-5 mb-4" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./img/bolso blanco.jpg" class="d-block w-100" alt="Imagen 1">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/boul graciana.jpg" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+      <img src="./img/mujer.jpg" class="d-block w-100" alt="Imagen 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+    <span class="visually-hidden">Anterior</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+    <span class="visually-hidden">Siguiente</span>
+  </button>
+</div>
+<!-- Botón debajo del carrusel -->
+<div class="text-center mb-5">
+  <a href="./pedidos exclusivos.html" class="btn btn-outline-secondary">
+    Ir a Pedidos Exclusivos
+  </a>
+</div>
+
+    <!-- FOOTER -->
+    <footer class="footer-index">
+      <h3 class="text-subtitle">Entre formas y puntadas</h3>
+      <p class="text-content">
+        Creamos arte único a mano con técnicas tradicionales y mucho amor.
+      </p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fas fa-envelope"></i>
+        <i class="fab fa-facebook"></i>
+      </div>
+      <p class="text-content">
+        Desarrolladora: Clausi Sabrina - 2025 |
+        <a href="mailto:sabrinaclausi@gmail.com">sabrinaclausi@gmail.com</a>
+      </p>
     </footer>
-</body>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>
