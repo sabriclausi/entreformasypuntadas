@@ -18,7 +18,7 @@
 }
 
 .card-producto {
-  flex: 1 1 300px; /* Esto hace que se ajuste automáticamente */
+  flex: 1 1 300px;
   max-width: 320px;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -67,8 +67,8 @@
   }
 }
 .carousel {
-  max-width: 600px; /* o el tamaño que prefieras */
-  margin: 0 auto; /* centra horizontalmente */
+  max-width: 600px;
+  margin: 0 auto;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);

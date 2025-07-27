@@ -121,7 +121,6 @@ function finalizePurchase() {
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
-  // Simulamos éxito con un mensaje lindo
   alert(`¡Gracias por tu compra! 🧵🫶\nTotal: $${total}\nTus obras están listas para volar a su nuevo hogar ✨`);
 
   // Limpia el carrito

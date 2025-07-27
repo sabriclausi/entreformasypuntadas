@@ -1,18 +1,11 @@
 .section-title {
   font-family: "MonteCarlo", cursive;
-  font-size: 3rem;
-  text-align: center;
+  font-size: 5rem;
   color: #1c4642;
-}
-@media (min-width: 768px) {
-  .section-title {
-    font-size: 5rem;
-  }
 }
 .card .carousel-inner img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 4/3;
+  height: 500px;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -55,6 +48,12 @@
   color: #1c4642;
   text-align: center;
 }
+.main-bordado {
+  background-color: #f2e7d5;
+  width: 100%;
+  margin: 0%;
+  padding: 2rem 6rem;
+}
 .boton-back {
   appearance: none;
   text-decoration: none;
@@ -70,23 +69,30 @@
   background: #f5daae;
   border-radius: 10px;
 }
-.main-ceramica {
-  background-color: #f2e7d5;
-  width: 100%;
-  margin: 0%;
-  padding: 2rem 2rem;
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-@media (min-width: 768px) {
-  .main-ceramica {
-    padding: 2rem 6rem;
+
+.card-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card .carousel-inner img {
+  height: 300px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .main-bordado {
+    padding: 2rem 1rem;
   }
-}
-.img-logo {
-  max-width: 100px;
-  height: auto;
-}
-@media (min-width: 768px) {
-  .img-logo {
-    max-width: 150px;
+
+  .card .carousel-inner img {
+    height: 200px;
   }
 }
