@@ -19,8 +19,6 @@ header {
 .logo-container {
   width: 4rem;
   height: 4rem;
-  display: flex;
-  align-items: center;
 }
 
 .img-logo {
@@ -28,11 +26,16 @@ header {
   height: 100%;
   object-fit: contain;
 }
-
+@media (max-width: 768px) {
+  .logo-container {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
 .site-title {
   font-family: "MonteCarlo", cursive;
   color: #235752;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .nav-item {
   font-family: "Josefin Sans", sans-serif;
