@@ -1,0 +1,92 @@
+.section-title {
+  font-family: "MonteCarlo", cursive;
+  font-size: 3rem;
+  text-align: center;
+  color: #1c4642;
+}
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 5rem;
+  }
+}
+.card .carousel-inner img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card-body {
+  background-color: #f5daae;
+  color: #333;
+  border-radius: 0 0 10px 10px;
+  padding: 1.2rem;
+}
+.card-title {
+  font-family: "MonteCarlo", cursive;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1c4642;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  color: #1c4642;
+}
+.card .btn-primary {
+  background-color: #1c4642;
+  border-color: #1c4642;
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.card .btn-primary:hover {
+  background-color: #1c4642;
+  border-color: #1c4642;
+}
+.texto {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  color: #1c4642;
+  text-align: center;
+}
+.boton-back {
+  appearance: none;
+  text-decoration: none;
+  color: #235752;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  width: 10rem;
+}
+.boton-back:hover {
+  background: #f5daae;
+  border-radius: 10px;
+}
+.main-ceramica {
+  background-color: #f2e7d5;
+  width: 100%;
+  margin: 0%;
+  padding: 2rem 2rem;
+}
+@media (min-width: 768px) {
+  .main-ceramica {
+    padding: 2rem 6rem;
+  }
+}
+.img-logo {
+  max-width: 100px;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .img-logo {
+    max-width: 150px;
+  }
+}
