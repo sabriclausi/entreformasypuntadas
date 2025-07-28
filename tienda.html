@@ -9,7 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Marck+Script&family=MonteCarlo&display=swap"
       rel="stylesheet"
     />
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -24,23 +23,19 @@
     <title>Tienda</title>
   </head>
   <body class="body-index">
-    <!-- HEADER -->
     <header class="shadow-sm sticky-top">
       <nav class="navbar navbar-expand-lg container-fluid">
         <div
           class="d-flex align-items-center w-100 px-3 justify-content-between"
         >
-          <!-- Logo -->
           <div class="logo-container">
             <img src="./img/logotipo1.png" alt="Logo" class="img-logo" />
           </div>
 
-          <!-- Título -->
           <h1 class="site-title m-0 flex-grow-1 text-center">
             Entre formas y puntadas
           </h1>
 
-          <!-- Botón hamburguesa -->
           <button
             class="navbar-toggler"
             type="button"
@@ -51,7 +46,6 @@
           </button>
         </div>
 
-        <!-- Menú navegación -->
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
@@ -81,70 +75,39 @@
         </div>
       </nav>
     </header>
-    <!-- MAIN -->
-    <main class="main-tienda">
-      <a href="./index.html" class="boton-back"
-        ><span><i class="fa-solid fa-arrow-left"></i></span>Volver al Inicio</a
-      >
-      <div class="title">
+
+    <main class="main-tienda my-5">
+      <a href="./index.html" class="boton-back mb-4 d-block">
+        <span><i class="fa-solid fa-arrow-left"></i></span>Volver al Inicio
+      </a>
+      <div class="title text-center mb-4">
         <h2 class="section-title">Tienda</h2>
         <p class="texto">
-          Descubre nuestras piezas disponibles para comprar inmediata. Cada obra
-          esta lista para encontrar su nuevo hogar.
+          Descubre nuestras piezas disponibles para comprar inmediatamente. Cada
+          obra está lista para encontrar su nuevo hogar.
         </p>
       </div>
-      <div class="card shadow-sm">
-        <img
-          src="./img/manchas1.jpg"
-          class="card-img-top"
-          alt="cuadro de manchas"
-        />
-        <div class="card-body">
-          <h5 class="card-title">Explosion Vital</h5>
-          <p class="card-text">
-            Abstracción pura que celebra el movimiento, la energía y la vida
-          </p>
-          <div class="footer-card">
-            <p>$50.000</p>
-            <div class="cart-btn"><i class="fa-solid fa-cart-plus"></i></div>
-          </div>
-        </div>
-      </div>
-      <div class="card shadow-sm">
-        <img
-          src="./img/manchas1.jpg"
-          class="card-img-top"
-          alt="cuadro de manchas"
-        />
-        <div class="card-body">
-          <h5 class="card-title">cadadads</h5>
-          <p class="card-text">
-            Abstracción pura que celebra el movimiento, la energía y la vida
-          </p>
-          <div class="footer-card">
-            <p>$50.000</p>
-            <div class="cart-btn"><i class="fa-solid fa-cart-plus"></i></div>
-          </div>
-        </div>
-      </div>
+
+      <div
+        class="row g-4 justify-content-center"
+        id="productos-container"
+      ></div>
     </main>
 
-    <!-- CARRITO DESPLEGABLE -->
     <div id="cart-container" class="cart-container d-none">
       <h4>Carrito de compras</h4>
       <ul id="cart-items" class="list-group mb-2"></ul>
       <p>Total: $<span id="cart-total">0</span></p>
       <div class="d-flex justify-content-between">
-        <button class="btn btn-danger btn-sm" onclick="emptyCart()">
+        <button class="btn btn-danger btn-sm" onclick="vaciarCarrito()">
           Vaciar carrito
         </button>
-        <button class="btn btn-success btn-sm" onclick="finalizePurchase()">
+        <button class="btn btn-success btn-sm" onclick="realizarCompra()">
           Finalizar compra
         </button>
       </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer-index">
       <h3 class="text-subtitle">Entre formas y puntadas</h3>
       <p class="text-content">
@@ -161,8 +124,8 @@
       </p>
     </footer>
 
-    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/tienda.js"></script>
   </body>
 </html>

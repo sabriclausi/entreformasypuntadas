@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Entre Formas y Puntadas - Pedidos Exclusivos</title>
     <link
       href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Josefin+Sans&display=swap"
       rel="stylesheet"
@@ -18,9 +17,9 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style-pedidos.css" />
+    <title>Entre Formas y Puntadas - Pedidos Exclusivos</title>
   </head>
   <body class="body-index">
-    <!-- HEADER -->
     <header class="shadow-sm sticky-top">
       <nav class="navbar navbar-expand-lg container-fluid">
         <div
@@ -32,7 +31,7 @@
           <h1 class="site-title m-0 flex-grow-1 text-center">
             Entre formas y puntadas
           </h1>
-          <!-- Botón hamburguesa -->
+
           <button
             class="navbar-toggler"
             type="button"
@@ -42,7 +41,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <!-- Menú navegación -->
+
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
@@ -69,7 +68,7 @@
             </li>
           </ul>
         </div>
-        <!-- CARRITO DESPLEGABLE -->
+
         <div id="cart-container" class="cart-container d-none">
           <h4>Carrito de compras</h4>
           <ul id="cart-items" class="list-group mb-2"></ul>
@@ -86,7 +85,6 @@
       </nav>
     </header>
 
-    <!-- MAIN -->
     <main class="main-pedidos py-5" style="background-color: #f2e7d5">
       <a href="./index.html" class="boton-back">
         <i class="fa-solid fa-arrow-left"></i> Volver al Inicio
@@ -116,7 +114,6 @@
         </p>
 
         <div class="row g-5 justify-content-center">
-          <!-- Formulario Cerámica -->
           <section class="col-md-6 col-lg-4">
             <h3
               class="section-title2 mb-3"
@@ -174,7 +171,6 @@
             </form>
           </section>
 
-          <!-- Formulario Bordado -->
           <section class="col-md-6 col-lg-4">
             <h3
               class="section-title2 mb-3"
@@ -233,7 +229,6 @@
             </form>
           </section>
 
-          <!-- Formulario Pintura -->
           <section class="col-md-6 col-lg-4">
             <h3
               class="section-title2 mb-3"
@@ -294,8 +289,20 @@
         </div>
       </div>
     </main>
+    <div id="cart-container" class="cart-container d-none">
+      <h4>Carrito de compras</h4>
+      <ul id="cart-items" class="list-group mb-2"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-danger btn-sm" onclick="vaciarCarrito()">
+          Vaciar carrito
+        </button>
+        <button class="btn btn-success btn-sm" onclick="realizarCompra()">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
 
-    <!-- FOOTER -->
     <footer
       class="footer-index text-center py-4"
       style="background-color: #f5daae; color: #235752"
@@ -322,8 +329,8 @@
       </p>
     </footer>
 
-    <!-- Scripts Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/tienda.js"></script>
   </body>
 </html>

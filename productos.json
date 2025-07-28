@@ -1,0 +1,98 @@
+[
+    {"name":"Mariposa",
+    "desc": "Bordado a mano con hilo mouline, esta mariposa destaca por su delicadeza y colorido, capturando la belleza de la naturaleza en cada ala",
+    "price": 25000,
+    "cat":"bordado",
+    "stock":2
+},
+{"name":"Rosa Amarilla",
+    "desc": "Una flor vibrante realizada con cinta, que aporta volumen y textura. Ideal para destacar en accesorios o detalles decorativos",
+    "price": 45000,
+    "cat":"bordado",
+    "stock":1
+}
+{"name":"Almohadones",
+    "desc": "Almohadones bordados con nombres y detalles florales en hilo mouline. Una opcion unica y calida para regalar o decorar tu hogar",
+    "price": 20000,
+    "cat":"bordado",
+    "stock":5
+}
+{"name":"Margarita",
+    "desc": "Esta margarita combina distintos puntos de bordado con hilo mouliné, logrando un efecto artesanal y lleno de vida",
+    "price": 10000,
+    "cat":"bordado",
+    "stock":3
+}
+{"name":"Bolso rosa Blanca",
+    "desc": "Un bolso intervenido con una rosa blanca hecha con cinta, que convierte un accesorio cotidiano en una pieza especial",
+    "price": 25000,
+    "cat":"bordado",
+    "stock":3
+}
+{"name":"Remera con flores",
+    "desc": "Remera bordada a mano con flores que rodean el cuello, aportando un detallle delicado y femenino al vestuario",
+    "price": 15000,
+    "cat":"bordado",
+    "stock":6
+}
+{"name":"Boul Flora",
+    "desc": "Cerámica artesanal decorada con la técnica de esgrafiado. La flor fue tallada a mano sobre engobe negro antes del esmaltado final",
+    "price": 15000,
+    "cat":"ceramica",
+    "stock":5
+}
+{"name":"Boul Graciana",
+    "desc": "Boul artesanal en cerámica, diseño único estampado a partir de una carpeta tejida. Esmaltado en azul profundo. Ideal para snack, salsas o decoración.",
+    "price": 25000,
+    "cat":"ceramica",
+    "stock":4
+}
+{"name":"Taza con filtro",
+    "desc": "Bandeja de cerámica hecha a mano, decorada con técnica de burbujas. Los tonos verdes aportan frescura y movimiento a la pieza",
+    "price": 15000,
+    "cat":"ceramica",
+    "stock":15
+}
+{"name":"Taza cielo",
+    "desc": "Taza de cerámica blanca decorada con círculos celestes en la base. Diseño sereno para disfrutar cada sorbo",
+    "price": 10000,
+    "cat":"ceramica",
+    "stock":15
+}
+{"name":"Plato cielo",
+    "desc": "Plato artesanal con fondo blanco y detalles en celeste. Ideal para acompañar la Taza Cielo o usarlo solo.",
+    "price": 18000,
+    "cat":"ceramica",
+    "stock":15
+}
+{"name":"bandeja",
+    "desc": "Bandeja de cerámica hecha a mano, decorada con técnica de burbujas. Los tonos verdes aportan frescura y movimiento a la pieza",
+    "price": 20000,
+    "cat":"ceramica",
+    "stock":10
+}
+{"name":"Volar es soltar",
+    "desc": "Una escena onírica donde un globo aerostático y un ave comparten el cielo al atardecer. Esta obra transmite la dualidad entre lo que flota y lo que vuela, lo que se eleva con ayuda y lo que lo hace por sí mismo. Técnica mixta y colores suaves que invitan a dejarse llevar",
+    "price": 35000,
+    "cat":"Pintura",
+    "stock":1
+}
+{"name":"Valle de la Luna",
+    "desc": "Inspirada en el asombroso paisaje del Valle de la Luna, en San Juan, esta obra transmite la majestuosidad del desierto y sus formaciones rocosas únicas. La paleta cálida y las texturas intensas evocan la fuerza mineral del lugar, bajo un cielo profundo que invita al silencio y la contemplación. Una pintura que captura la magia de lo ancestral y lo eterno",
+    "price": 55000,
+    "cat":"Pintura",
+    "stock":1
+}
+{"name":"Explosion Vital",
+    "desc": "Abstracción pura que celebra el movimiento, la energía y la vida. Trazos espontáneos, colores vibrantes y contrastes intensos se encuentran en una danza visual donde cada espectador puede descubrir una forma diferente. Una obra llena de fuerza expresiva",
+    "price": 50000,
+    "cat":"Pintura",
+    "stock":1
+}
+{"name":"Guardianas del Bosque",
+    "desc": "Entre texturas y colores terrosos, se insinúan figuras femeninas que emergen como parte del paisaje. Esta obra evoca la conexión ancestral con la naturaleza y el rol sagrado de lo femenino. Pintura cargada de simbolismo y mística",
+    "price": 60000,
+    "cat":"Pintura",
+    "stock":1
+}
+]

@@ -25,17 +25,15 @@
   </head>
 
   <body class="body-index">
-    <!-- HEADER -->
+   
     <header class="shadow-sm sticky-top">
       <nav class="navbar navbar-expand-lg container-fluid">
         <div
-          class="d-flex align-items-center w-100 px-3 justify-content-between"
-        >
-          <!-- Logo -->
+          class="d-flex align-items-center w-100 px-3 justify-content-between">
+          
           <div class="logo-container">
           <img src="img/logotipo1.png" class="img-logo" alt="Logo" /></div>
 
-          <!-- Título -->
           <h1 class="site-title m-0 flex-grow-1 text-center">
             Entre formas y puntadas
           </h1>
@@ -48,7 +46,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-        <!-- Menú navegación -->
+      
         <div class="collapse navbar-collapse" id="navbarContent">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
@@ -92,7 +90,7 @@
       </nav>
     </header>
 
-    <!-- MAIN -->
+    
      <main class="main-productos">
       <a href="./index.html" class="boton-back"
         ><span><i class="fa-solid fa-arrow-left"></i></span>Volver al Inicio</a>
@@ -103,10 +101,10 @@
         </p>
       </div>
 
-<!-- Cards -->
+
  <div class="cards-section">
   <div class="card-group-productos">
-    <!-- Bordado -->
+   
     <div class="card card-producto">
       <img src="./img/bolso blanco.jpg" class="card-img-top" alt="Producto de Bordado">
       <div class="card-body">
@@ -116,7 +114,7 @@
       </div>
     </div>
 
-    <!-- Cerámica -->
+    
     <div class="card card-producto">
       <img src="./img/boul flora.jpg" class="card-img-top" alt="Producto de Cerámica">
       <div class="card-body">
@@ -126,7 +124,7 @@
       </div>
     </div>
 
-    <!-- Pintura -->
+    
     <div class="card card-producto">
       <img src="./img/globo1.jpg" class="card-img-top" alt="Producto de Pintura">
       <div class="card-body">
@@ -138,7 +136,7 @@
   </div>
 </div>
 
-<!-- Carrusel -->
+
  <div id="carouselExample" class="carousel slide mt-5 mb-4" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -160,14 +158,26 @@
     <span class="visually-hidden">Siguiente</span>
   </button>
 </div>
-<!-- Botón debajo del carrusel -->
+
 <div class="text-center mb-5">
   <a href="./pedidos exclusivos.html" class="btn btn-outline-secondary">
     Ir a Pedidos Exclusivos
   </a>
 </div>
+ <div id="cart-container" class="cart-container d-none">
+      <h4>Carrito de compras</h4>
+      <ul id="cart-items" class="list-group mb-2"></ul>
+      <p>Total: $<span id="cart-total">0</span></p>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-danger btn-sm" onclick="vaciarCarrito()">
+          Vaciar carrito
+        </button>
+        <button class="btn btn-success btn-sm" onclick="realizarCompra()">
+          Finalizar compra
+        </button>
+      </div>
+    </div>
 
-    <!-- FOOTER -->
     <footer class="footer-index">
       <h3 class="text-subtitle">Entre formas y puntadas</h3>
       <p class="text-content">
@@ -184,8 +194,9 @@
       </p>
     </footer>
 
-    <!-- Scripts -->
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./js/script.js"></script>
+     <script src="./js/tienda.js"></script>
   </body>
 </html>
